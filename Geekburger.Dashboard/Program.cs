@@ -1,6 +1,16 @@
+using Geekburger.Dashboard.Data;
+using Geekburger.Dashboard.Database;
+using Geekburger.Dashboard.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<DashboardDbContext>();
+builder.Services.AddScoped<OrderRepository>();
+builder.Services.AddScoped<RestrictionRepository>();
+builder.Services.AddScoped<RestrictionService>();
+builder.Services.AddScoped<SalesService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

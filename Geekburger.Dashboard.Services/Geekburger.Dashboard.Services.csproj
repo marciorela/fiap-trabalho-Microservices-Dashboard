@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Geekburger.Dashboard.Contract\Geekburger.Dashboard.Contract.csproj" />
+    <ProjectReference Include="..\Geekburger.Dashboard.Data\Geekburger.Dashboard.Data.csproj" />
+    <ProjectReference Include="..\Geekburger.Dashboard.Domain\Geekburger.Dashboard.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Geekburger.Order.Contract">
+      <HintPath>..\..\Geekburger.Order\Geekburger.Order.Contract\bin\Debug\netstandard2.0\Geekburger.Order.Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
