@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Dashboard.Api", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Dashboard.Contract", "Geekburger.Dashboard.Contract\Geekburger.Dashboard.Contract.csproj", "{EAE59804-804E-4A94-88B1-16B4C55E2E30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Dashboard.WS", "Geekburger.Dashboard.WS\Geekburger.Dashboard.WS.csproj", "{0302F20B-A953-4A5C-B97E-8955D64F51EB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Dashboard.Database", "Geekburger.Dashboard.Database\Geekburger.Dashboard.Database.csproj", "{E9F7CA74-0335-402A-AE08-164E4CA1BBD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Dashboard.Domain", "Geekburger.Dashboard.Domain\Geekburger.Dashboard.Domain.csproj", "{B6460F54-54F8-4417-9F57-9E4736872CBB}"
@@ -33,10 +31,6 @@ Global
 		{EAE59804-804E-4A94-88B1-16B4C55E2E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE59804-804E-4A94-88B1-16B4C55E2E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE59804-804E-4A94-88B1-16B4C55E2E30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0302F20B-A953-4A5C-B97E-8955D64F51EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0302F20B-A953-4A5C-B97E-8955D64F51EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0302F20B-A953-4A5C-B97E-8955D64F51EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0302F20B-A953-4A5C-B97E-8955D64F51EB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9F7CA74-0335-402A-AE08-164E4CA1BBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9F7CA74-0335-402A-AE08-164E4CA1BBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9F7CA74-0335-402A-AE08-164E4CA1BBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Geekburger.Services\Messages.Service\Messages.Service.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Contract\Geekburger.Dashboard.Contract.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Data\Geekburger.Dashboard.Data.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Domain\Geekburger.Dashboard.Domain.csproj" />

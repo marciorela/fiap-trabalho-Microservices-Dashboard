@@ -4,7 +4,7 @@ using Geekburger.Order.Contract.Messages;
 
 namespace Geekburger.Dashboard.Services
 {
-    public class SalesService
+    public class SalesService : ISalesService
     {
         private readonly OrderRepository _orderRepository;
 

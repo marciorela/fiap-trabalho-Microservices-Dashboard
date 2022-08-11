@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Geekburger.Services\Messages.Service\Messages.Service.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Contract\Geekburger.Dashboard.Contract.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Database\Geekburger.Dashboard.Database.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Data\Geekburger.Dashboard.Data.csproj" />

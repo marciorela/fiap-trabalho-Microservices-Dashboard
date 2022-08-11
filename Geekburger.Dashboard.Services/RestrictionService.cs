@@ -52,7 +52,7 @@ namespace Geekburger.Dashboard.Services
             {
                 if (item.Restrictions.Count < 4)
                 {
-                    var  strRestriction = string.Join(",", item.Restrictions);
+                    var strRestriction = string.Join(",", item.Restrictions);
                     var result = results.Where(x => strRestriction == x.Restrictions).FirstOrDefault();
                     if (result == null)
                     {
