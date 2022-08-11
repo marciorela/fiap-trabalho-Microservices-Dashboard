@@ -1,6 +1,8 @@
 ﻿using Geekburger.Dashboard.Domain.Entities;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Geekburger.Dashboard.Database
 {
@@ -27,6 +29,25 @@ namespace Geekburger.Dashboard.Database
         {
             modelBuilder.Entity<Restriction>().HasKey(s => new { s.UserId, s.Name });
             modelBuilder.Entity<Order>().HasKey(s => new { s.OrderId, s.StoreName });
+        }
+
+        public static void EnsureCreated(IApplicationBuilder app)
+        {
+            var factory = app.ApplicationServices.GetService<IServiceScopeFactory>();
+
+            if (factory is not null)
+            {
+                using var scope = factory.CreateScope();
+
+                var ctx = scope.ServiceProvider.GetService<DashboardDbContext>();
+                if (ctx is not null)
+                {
+                    if (ctx is not null)
+                    {
+                        ctx.Database.EnsureCreated();
+                    }
+                }
+            }
         }
     }
 }

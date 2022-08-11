@@ -36,4 +36,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+DashboardDbContext.EnsureCreated(app);
+
 app.Run();
