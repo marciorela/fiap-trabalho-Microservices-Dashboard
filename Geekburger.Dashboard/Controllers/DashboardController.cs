@@ -11,9 +11,9 @@ namespace Geekburger.Dashboard.Controllers
     {
         private readonly ILogger<DashboardController> _logger;
         private readonly RestrictionService _restrictionService;
-        private readonly SalesService _salesService;
+        private readonly ISalesService _salesService;
 
-        public DashboardController(ILogger<DashboardController> logger, RestrictionService restrictionService, SalesService salesService)
+        public DashboardController(ILogger<DashboardController> logger, RestrictionService restrictionService, ISalesService salesService)
         {
             _logger = logger;
             _restrictionService = restrictionService;

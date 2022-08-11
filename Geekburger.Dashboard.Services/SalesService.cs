@@ -21,7 +21,7 @@ namespace Geekburger.Dashboard.Services
                 {
                     OrderId = orderChanged.OrderId,
                     StoreName = orderChanged.StoreName,
-                    Value = 0
+                    Value = orderChanged.Total
                 });
             }
         }

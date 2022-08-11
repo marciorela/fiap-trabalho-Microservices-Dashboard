@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Geekburger.Order.Contract" Version="21.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
@@ -16,12 +17,6 @@
     <ProjectReference Include="..\Geekburger.Dashboard.Contract\Geekburger.Dashboard.Contract.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Data\Geekburger.Dashboard.Data.csproj" />
     <ProjectReference Include="..\Geekburger.Dashboard.Domain\Geekburger.Dashboard.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Geekburger.Order.Contract">
-      <HintPath>..\..\Geekburger.Order\Geekburger.Order.Contract\bin\Debug\netstandard2.0\Geekburger.Order.Contract.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
