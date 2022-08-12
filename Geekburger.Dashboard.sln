@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages.Service", "..\Geek
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Dashboard.Services", "Geekburger.Dashboard.Services\Geekburger.Dashboard.Services.csproj", "{BF6B7837-3312-4353-ACA6-BBD636218D0C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geekburger.Extensions", "..\Geekburger.Services\Geekburger.Extensions\Geekburger.Extensions.csproj", "{D7A6C280-7D7A-45D7-AABE-B7E1651458DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BF6B7837-3312-4353-ACA6-BBD636218D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF6B7837-3312-4353-ACA6-BBD636218D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF6B7837-3312-4353-ACA6-BBD636218D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A6C280-7D7A-45D7-AABE-B7E1651458DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A6C280-7D7A-45D7-AABE-B7E1651458DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A6C280-7D7A-45D7-AABE-B7E1651458DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A6C280-7D7A-45D7-AABE-B7E1651458DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

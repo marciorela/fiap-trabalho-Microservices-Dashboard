@@ -1,4 +1,5 @@
 ﻿using Geekburger.Dashboard.Domain;
+using Geekburger.Extensions;
 using Messages.Service.Messages;
 using Messages.Service.Models;
 using Microsoft.AspNetCore.Builder;
@@ -35,23 +36,12 @@ namespace Geekburger.Dashboard.Services
             var userWithLessOffer = JsonConvert.DeserializeObject<UserWithLessOffer>(x);
 
             // ASSIM QUE RECEBER A MENSAGEM, GRAVA NO BANCO
-            if (userWithLessOffer is not null)
+            if (userWithLessOffer is not null && _services is not null)
             {
-                var factory = _services?.GetService<IServiceScopeFactory>();
-
-                if (factory is not null)
+                await _services.ExecuteAsync<RestrictionService>(async (_restrictionService) =>
                 {
-                    using var scope = factory.CreateScope();
-
-                    var _restrictionService = scope.ServiceProvider.GetService<RestrictionService>();
-                    if (_restrictionService is not null)
-                    {
-                        if (_restrictionService is not null)
-                        {
-                            await _restrictionService.Add(userWithLessOffer);
-                        }
-                    }
-                }
+                    await _restrictionService.Add(userWithLessOffer);
+                });
             }
         }
     }

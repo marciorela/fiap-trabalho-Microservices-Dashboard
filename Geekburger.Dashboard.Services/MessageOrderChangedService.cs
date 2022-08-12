@@ -1,9 +1,11 @@
-﻿using Geekburger.Order.Contract.Messages;
+﻿using Geekburger.Extensions;
+using Geekburger.Order.Contract.Messages;
 using Messages.Service.Messages;
 using Messages.Service.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using System;
 using System.Text;
 
 namespace Geekburger.Dashboard.Services
@@ -31,23 +33,12 @@ namespace Geekburger.Dashboard.Services
             var orderChanged = JsonConvert.DeserializeObject<OrderChanged>(x);
 
             // ASSIM QUE RECEBER A MENSAGEM, GRAVA NO BANCO
-            if (orderChanged is not null)
+            if (orderChanged is not null && _services is not null)
             {
-                var factory = _services?.GetService<IServiceScopeFactory>();
-
-                if (factory is not null)
+                await _services.ExecuteAsync<ISalesService>(async (_salesService) =>
                 {
-                    using var scope = factory.CreateScope();
-
-                    var _salesService = scope.ServiceProvider.GetService<ISalesService>();
-                    if (_salesService is not null)
-                    {
-                        if (_salesService is not null)
-                        {
-                            await _salesService.Add(orderChanged);
-                        }
-                    }
-                }
+                    await _salesService.Add(orderChanged);
+                });
             }
         }
     }

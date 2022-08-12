@@ -1,6 +1,7 @@
 using Geekburger.Dashboard.Data;
 using Geekburger.Dashboard.Database;
 using Geekburger.Dashboard.Services;
+using Geekburger.Extensions;
 using Messages.Service.Messages;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,6 +37,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-DashboardDbContext.EnsureCreated(app);
+app.Services.Execute<DashboardDbContext>((context) => 
+    context.Database.EnsureCreated()
+);
 
 app.Run();
