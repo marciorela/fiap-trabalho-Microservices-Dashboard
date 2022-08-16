@@ -2,6 +2,7 @@
 using Geekburger.Dashboard.Data;
 using Geekburger.Dashboard.Domain;
 using Geekburger.Dashboard.Domain.Entities;
+using Geekburger.Dashboard.Domain.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,12 +46,12 @@ namespace Geekburger.Dashboard.Services
                     grouped.Add(group);
                 }
                 group.UserId = item.UserId;
-                group.Restrictions.Add(item.Name);
+                group.Restrictions.Append(item.Name);
             }
 
             foreach (var item in grouped)
             {
-                if (item.Restrictions.Count < 4)
+                if (item.Restrictions.Count() < 4)
                 {
                     var strRestriction = string.Join(",", item.Restrictions);
                     var result = results.Where(x => strRestriction == x.Restrictions).FirstOrDefault();

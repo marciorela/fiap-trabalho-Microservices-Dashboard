@@ -13,7 +13,7 @@ namespace Geekburger.Dashboard.Database.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    OrderId = table.Column<int>(type: "INTEGER", nullable: false),
+                    OrderId = table.Column<Guid>(type: "TEXT", nullable: false),
                     StoreName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     Value = table.Column<double>(type: "REAL", nullable: false),
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false)
@@ -27,7 +27,7 @@ namespace Geekburger.Dashboard.Database.Migrations
                 name: "Restrictions",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
+                    UserId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false)
                 },
                 constraints: table =>

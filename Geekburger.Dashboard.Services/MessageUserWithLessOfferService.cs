@@ -1,4 +1,5 @@
 ﻿using Geekburger.Dashboard.Domain;
+using Geekburger.Dashboard.Domain.Messages;
 using Geekburger.Extensions;
 using Messages.Service.Messages;
 using Messages.Service.Models;

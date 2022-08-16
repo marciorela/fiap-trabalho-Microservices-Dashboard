@@ -10,7 +10,7 @@ namespace Geekburger.Dashboard.Domain.Entities
     public class Restriction
     {
         [Required]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         [Required]
         [StringLength(30)]

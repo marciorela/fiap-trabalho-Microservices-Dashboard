@@ -11,18 +11,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Geekburger.Dashboard.Database.Migrations
 {
     [DbContext(typeof(DashboardDbContext))]
-    [Migration("20220727003355_inicial")]
+    [Migration("20220816011108_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
 
             modelBuilder.Entity("Geekburger.Dashboard.Domain.Entities.Order", b =>
                 {
-                    b.Property<int>("OrderId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("StoreName")
                         .HasMaxLength(50)
@@ -41,8 +41,8 @@ namespace Geekburger.Dashboard.Database.Migrations
 
             modelBuilder.Entity("Geekburger.Dashboard.Domain.Entities.Restriction", b =>
                 {
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasMaxLength(30)

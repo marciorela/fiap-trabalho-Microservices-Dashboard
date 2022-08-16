@@ -10,7 +10,7 @@ namespace Geekburger.Dashboard.Domain.Entities
     public class Order
     {
         [Required]
-        public int OrderId { get; set; }
+        public Guid OrderId { get; set; }
 
         [Required]
         [StringLength(50)]
